@@ -1,0 +1,25 @@
+// Feature Engineering Pipeline
+digraph {
+	graph [bgcolor=white nodesep=1 rankdir=TB ranksep=1.2 splines=ortho]
+	node [color="#333333" fillcolor=lightblue fontname=Calibri fontsize=11 margin="0.4,0.3" penwidth=2.5 shape=box style="rounded,filled"]
+	edge [arrowsize=1.5 color="#333333" penwidth=2.5]
+	raw_eeg [label="19 Raw EEG Channels
+(Fp1 to O2)" fillcolor="#FFD700" fontsize=12 fontweight=bold shape=box style="rounded,filled"]
+	channel_stats [label="Channel Statistics:
+Mean & Std Dev
+(38 Features)" fillcolor="#87CEEB"]
+	global_stats [label="Global Statistics:
+Mean, Range, Max, Min, Std
+(5 Features)" fillcolor="#87CEEB"]
+	spatial_interact [label="Spatial Interactions:
+Top 3 Variance Channel
+Products (3 Features)" fillcolor="#87CEEB"]
+	final_feature [label="Final Feature Space
+(65 Dimensions)" fillcolor="#90EE90" fontsize=12 fontweight=bold shape=box style="rounded,filled"]
+	raw_eeg -> channel_stats
+	raw_eeg -> global_stats
+	raw_eeg -> spatial_interact
+	channel_stats -> final_feature
+	global_stats -> final_feature
+	spatial_interact -> final_feature
+}

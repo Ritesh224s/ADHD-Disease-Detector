@@ -1,0 +1,22 @@
+XGBoost ADHD Detection Model - Performance Metrics (CPU)
+==================================================
+
+Accuracy:  77.28%
+Precision: 80.88%
+Recall:    63.76%
+F1-Score:  71.31%
+ROC-AUC:   84.79%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        ADHD       0.75      0.88      0.81    241414
+     Control       0.81      0.64      0.71    191863
+
+    accuracy                           0.77    433277
+   macro avg       0.78      0.76      0.76    433277
+weighted avg       0.78      0.77      0.77    433277
+
+Confusion Matrix:
+[[212503  28911]
+ [ 69537 122326]]

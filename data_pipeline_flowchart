@@ -1,0 +1,24 @@
+// Data Preprocessing Pipeline
+digraph {
+	rankdir=TB
+	graph [bgcolor=white nodesep=0.5 pad=0.5 ranksep=1.0 splines=ortho]
+	node [color="#2E86AB" fillcolor=lightblue fontname=Arial fontsize=10 margin="0.3,0.2" penwidth=2 shape=box style="rounded,filled"]
+	edge [arrowsize=1.5 color="#2E86AB" penwidth=2]
+	n1 [label="Raw EEG Dataset
+(2,166,383 samples)" color="#1565C0" fillcolor="#ADD8E6" fontsize=10 fontweight=bold]
+	n2 [label="Data Sanitization
+(Remove Nulls, Handle NaNs)" color="#2E86AB" fillcolor="#ADD8E6"]
+	n3 [label="Feature Normalization
+(StandardScaler: z-score)" color="#2E86AB" fillcolor="#ADD8E6"]
+	n4 [label="Stratified Data Split
+(Random State=42)" color="#2E86AB" fillcolor="#ADD8E6" fontweight=bold]
+	n5a [label="Training Set
+(80%: 1,733,106 samples)" color="#0277BD" fillcolor="#B3E5FC" fontweight=bold]
+	n5b [label="Testing Set
+(20%: 433,277 samples)" color="#0277BD" fillcolor="#B3E5FC" fontweight=bold]
+	n1 -> n2 [label=""]
+	n2 -> n3 [label=""]
+	n3 -> n4 [label=""]
+	n4 -> n5a [label=""]
+	n4 -> n5b [label=""]
+}

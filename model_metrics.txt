@@ -1,0 +1,41 @@
+======================================================================
+ADHD DISEASE DETECTION - XGBOOST MODEL
+======================================================================
+
+DATASET INFORMATION
+----------------------------------------------------------------------
+Total Samples: 2,166,383
+Training Samples: 1,386,484 (80%)
+Testing Samples: 346,622 (20%)
+Original Features: 19
+Engineered Features: 46
+Total Features: 65
+Classes: 2 (ADHD vs Control)
+
+MODEL PERFORMANCE
+----------------------------------------------------------------------
+Accuracy: 77.84%
+AUC-ROC Score: 0.8541
+
+CLASSIFICATION REPORT
+----------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+        ADHD       0.78      0.83      0.81    193106
+     Control       0.77      0.71      0.74    153516
+
+    accuracy                           0.78    346622
+   macro avg       0.78      0.77      0.77    346622
+weighted avg       0.78      0.78      0.78    346622
+
+CONFUSION MATRIX
+----------------------------------------------------------------------
+True Negatives: 160,299
+False Positives: 32,807
+False Negatives: 44,003
+True Positives: 109,513
+
+SENSITIVITY & SPECIFICITY
+----------------------------------------------------------------------
+Sensitivity (True Positive Rate): 0.8301
+Specificity (True Negative Rate): 0.7134
